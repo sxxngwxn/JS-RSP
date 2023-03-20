@@ -1,2 +1,2 @@
 # JavaScriptRSP
-RSP is rock scissor paper kkkkkkk
+RSP is rock scissor paper
