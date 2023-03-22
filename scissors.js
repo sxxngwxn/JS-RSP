@@ -2,6 +2,7 @@
 const rsp_input = document.querySelector("#rsp_input");
 const my_value = document.querySelector("#my_value");
 const enemy_value = document.querySelector("#enemy_value");
+const match_result = document.querySelector("#match_result");
 
 const rsp_arr = [0, 1, 2];
 
@@ -42,6 +43,34 @@ rsp_input.addEventListener("change", () => {
   } else {
     rsp = null;
     my_value.innerText = "𝟜𝟘𝟜";
+  }
+
+  if (rsp === 0) {
+    if (rsp === bot_rsp_value) {
+      match_result.innerText = "Draw";
+    } else if (bot_rsp_value === 1) {
+      match_result.innerText = "Win";
+    } else {
+      match_result.innerText = "Lose";
+    }
+  } else if (rsp === 1) {
+    if (rsp === bot_rsp_value) {
+      match_result.innerText = "Draw";
+    } else if (bot_rsp_value === 0) {
+      match_result.innerText = "Lose";
+    } else {
+      match_result.innerText = "Win";
+    }
+  } else if (rsp === 2) {
+    if (rsp === bot_rsp_value) {
+      match_result.innerText = "Draw";
+    } else if (bot_rsp_value === 0) {
+      match_result.innerText = "Win";
+    } else {
+      match_result.innerText = "Lose";
+    }
+  } else {
+    match_result.innerText = "Please Enter Correct Value";
   }
 
   console.log(rsp, bot_rsp_value);
