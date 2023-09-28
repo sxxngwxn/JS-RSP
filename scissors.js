@@ -33,8 +33,8 @@ rsp_input.addEventListener("change", () => {
     rsp = scissor;
     my_value.innerText = "✂️";
   } else if (rsp_input.value === "egg") {
-    // 1
-    rsp = scissor;
+    // 2
+    rsp = paper;
     my_value.innerText = "🥚";
   } else if (rsp_input.value === "paper") {
     // 2
